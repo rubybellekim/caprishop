@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>bootstrap practice</title>
+
+        <style>
+        @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,700');
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
+$gr-1:linear-gradient(170deg, #01E4F8 0%, #1D3EDE 100%);
+$gr-2:linear-gradient(170deg, #B4EC51 0%, #429321 100%);
+$gr-3:linear-gradient(170deg, #C86DD7 0%, #3023AE 100%);
+
+.gr-1{background: $gr-1;}
+.gr-2{background: $gr-2;}
+.gr-3{background: $gr-3;}
+
+*{transition: .5s;}
+
+.h-100{height: 100vh !important;}
+.align-middle{
+  position: relative;
+  top:50%;
+  /* transform:translateY(-50%); */
+}
+
+.column{
+  margin-top:3rem;
+  padding-left:3rem;
+  &:hover{
+    padding-left:0;
+    .card .txt{
+      margin-left:1rem;
+      h1, p{
+        color:rgba(255,255,255,1);
+        opacity:1;
+      }
+    }
+    a{
+      color:rgba(255,255,255,1);
+      &:after{
+      width: 10%;
+      }
+    }
+  }
+}
+.card{
+  min-height:170px;
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 1.7rem 1.2rem;
+  border: none;
+  border-radius: 0;
+  color:rgba(0,0,0,1);
+  letter-spacing: .05rem;
+  font-family: 'Oswald', sans-serif;
+  box-shadow: 0 0 21px rgba(0,0,0,.27);
+  .txt{
+    margin-left:-3rem;
+    z-index: 1;
+    h1{
+      font-size:1.5rem;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+    p{
+      font-size:.7rem;
+      font-family: 'Open Sans', sans-serif;
+      letter-spacing: 0rem;
+      margin-top:33px;
+      opacity:0;
+      color:rgba(255,255,255,1);
+    }
+  }
+  a{
+    z-index:3;
+    font-size: .7rem;
+    color:rgba(0,0,0,1);
+    margin-left:1rem;
+    position:relative;
+    bottom: -.5rem;
+    text-transform: uppercase;
+    &:after {
+      content:"";
+      display: inline-block;
+      height: 0.5em;
+      width: 0;
+      margin-right: -100%;
+      margin-left: 10px;
+      border-top: 1px solid rgba(255,255,255,1);
+      transition: .5s;
+    }
+  }
+  .ico-card{
+    position:absolute;
+    top: 0;
+    left:0;
+    bottom:0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  i{
+    position: relative;
+    right: -50%;
+    top:60%;
+    font-size: 12rem;
+    line-height: 0;
+    opacity: .2;
+    color:rgba(255,255,255,1);
+    z-index: 0;
+   }
+}
+
+    div.item-card {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    div.item-card:hover {
+        cursor: pointer;
+    }
+
+    div.item-card:hover .item-card-pic {
+        opacity: 0.5;
+    }
+
+    .item-card-pic {
+        width: 280px;
+        height: 317px;
+        padding: 1px;
+    }
+
+    .item-card-name {
+        font-size: 1em;
+        padding: 15px 0 1px 0;
+    }
+
+    .item-card-price {
+        font-size: 0.85em;
+    }
+
+    .item-card-view-btn {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        text-align: center;
+        background-color: #f9fafb;
+        line-height: 50px;
+        border: 1px solid black;
+    }
+
+    .invisible-btn {
+        display: none;
+    }
+
+
+    /* .slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+    .heroCarousel-slide {
+    position: relative;
+}
+
+@media (min-width: 801px)
+.heroCarousel-slide .heroCarousel-image {
+    object-fit: cover;
+    max-height: 42.85714rem;
+    width: 100%;
+
+    .slick-slide img {
+    display: block;
+} */
+
+        </style>
+
+
+        <style>
+
+        /* * {
+                margin: 5px auto;
+                padding: 15px;
+            }
+        .nav-tabs {
+                display: block;
+                font: 0.8em 'Monaco', monospace;
+                font-weight: bold;
+                text-align: center;
+            }
+
+        .tab-content {
+                font: 'Lora', serif;
+        }
+
+        nav a:hover {
+                display: none;
+            }
+        nav a:active {
+                display: none;
+            }
+        nav select {
+                display: none;
+            } */
+
+            .page-content {
+                margin: 70px 0 0 0;
+            }
+
+
+            .logo {
+                padding: 20px 0 20px 0;
+            }
+            .logo-img {
+                width: 150px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .menu-HeQ {
+    align-items: center;
+    display: flex;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: center;
+    list-style-type: none;
+    margin-left: -25px;
+    margin-right: -70px;
+    outline: none;
+    padding: 0;
+    width: 100%;
+}
+
+            .menu__link--text-p6U {
+    position: relative;
+    /* font-family: var(--futura-font); */
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    color: #191919;
+}
+
+.menu__link-brM {
+    padding: 0 12px;
+}
+
+.menu__link-brM {
+    display: inline-block;
+    padding: 0 100px;
+    position: relative;
+    text-decoration: none;
+    vertical-align: top;
+    z-index: 2;
+}
+
+.link-SmN {
+    cursor: pointer;
+}
+
+
+.carousel-inner img {
+  height: 450px;
+  object-fit: cover
+}
+
+        </style>
+
+
+        <link rel="stylesheet" href="./css/bootstrap.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="./js/bootstrap.js"></script>
+
+                <!-- Slider CSS -->
+      <link href="./css/horizontalvertical.css" rel="stylesheet" />
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#mainMenu").tab();
+                
+                $('#mainMenu .nav-tabs a').click(function (e) {
+                    e.preventDefault()
+                    $(this).tab('show')
+                });
+                $("#mainMenu .nav-tabs a").addClass("menu__link--text-p6U menu__link-brM menu__link-brM link-SmN")
+
+
+                addProductCard("./products/item1.png", "LETTUCE WARE TEAPOT", "$125", [], "item 1 description")
+                addProductCard("./products/item2.png", "LETTUCE WARE DINNER PLATE M", "$48", [], "item 2 description")
+                addProductCard("./products/item3.png", "LETTUCE WARE DINNER PLATE L", "$52", [], "item 3 description")
+                addProductCard("./products/item4.png", "SPONGEWARE SERVING BOWL" ,"$85", [], "item 4 description")
+                addProductCard("./products/item5.png", "MOCHAWARE MUG" ,"$160", [], "item 5 description")
+                addProductCard("./products/item6.png", "MOCHAWARE PITCHER" ,"$148", [], "item 6 description")
+                addProductCard("./products/item7.png", "OISEAU SALAD PLATE" ,"$160", [], "item 7 description")
+                addProductCard("./products/item8.png", "OISEAU DINNER PLATE" ,"$128", [], "item 8 description")
+                addProductCard("./products/item9.png", "PRESSED-GLASS WINE GLASS" ,"$119", [], "item 9 description")
+
+
+                // addProductCard("./products/item1.png", "LETTUCE WARE TEAPOT" ,"$125",
+                //                 ["./products/item1_01.jpg", "./products/item1_02.jpg"],
+                //                "item 1 description")
+
+                $('#myModal').modal()
+                // $('#myModal').on('shown.bs.modal', function () {
+                //   $('#myInput').focus()
+                // })
+
+
+                $("#carouselExampleIndicators").carousel({
+                  interval: 3000,
+                  pause: "hover"
+                });
+
+
+                $('.carousel-control-prev').on("click", function() {
+                  $("#carouselExampleIndicators").carousel('prev');
+                });
+
+                $('.carousel-control-next').click(function() {
+                  $('#carouselExampleIndicators').carousel('next');
+                });
+              });
+
+            function showItemDetails(itemTitle, itemPictures, itemDescription){
+                $("#item-view-title").text(itemTitle)
+                $("#item-view-description").text(itemDescription)
+
+                $('#myModal').modal('show')
+            }
+
+            function addProductCard(imgPath, title, price, pictures, itemDescription) {
+                var newCard = $("<div class=\"col-md-6 col-lg-4 column item-card\">" +
+                    "<div class=\"card gr-1\">" +
+                    "<div style=\"position: relative;\"><img class=\"item-card-pic\" src=\"" + imgPath + "\", href=\"#modal\" />" +
+                        "<div class=\"item-card-view-btn invisible-btn\">View item</div></div>" +
+                    "<h1 class=\"item-card-name\">" + title + "</h1>" +
+                    "<div class=\"item-card-price\">" + price + "</div>" +
+                    "</div> </div>")
+                // var newCard = $("<div class=\"col-md-6 col-lg-4 column item-card\">" +
+                //     "<div class=\"card gr-1\">" +
+                //     "<div style=\"position: relative;\"><img class=\"item-card-pic\" src=\"" + imgPath + "\", href=\"#modal\" />" +
+                //         "<button type=\"button\" data-loading-text=\"Loading...\" class=\"btn btn-primary item-card-view-btn invisible-btn\">View</button>" +
+                //     "<h1 class=\"item-card-name\">" + title + "</h1>" +
+                //     "<div class=\"item-card-price\">" + price + "</div>" +
+                //     "</div> </div>")
+                    
+                newCard.appendTo("#product-list")
+
+                newCard.on({
+                    mouseenter: function(){
+                        $(this).find(".item-card-view-btn").removeClass("invisible-btn")
+                    },
+                    mouseleave: function(){
+                        $(this).find(".item-card-view-btn").addClass("invisible-btn")
+                    },
+                    click: function(){
+                        showItemDetails(title, pictures, itemDescription)
+                    }
+
+                });
+            }
+        </script>
+    </head>
+    <body>
+
+        <!-- Logo image -->
+
+        <div class="logo">
+          <img src="./sources/logo1.png" class="logo-img" />
+        </div>
+
+
+        <div id="mainMenu">
+
+            <!-- Nav tabs -->
+
+            <ul class="nav nav-tabs menu-HeQ" role="tablist">
+              <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">HOME</a></li>
+              <li role="presentation"><a href="#about" aria-controls="profile" role="tab" data-toggle="tab">ABOUT US</a></li>
+              <li role="presentation"><a href="#contact" aria-controls="messages" role="tab" data-toggle="tab">CONTACT</a></li>
+            </ul>
+          
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <!--    HOME - BEGIN    -->
+              <div role="tabpanel" class="tab-pane page-content active" id="home">
+
+               
+                <!-- Modal -->
+                <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <!-- ---------------------- -->
+                            <h4 id="item-view-title">Modal title</h4>
+
+                            <div class="horVerSlider" data-desktop="800" data-tabportrait="450" data-tablandscape="450"
+                                data-mobilelarge="375" data-mobilelandscape="500" data-mobileportrait="375">
+                                <!-- <div class="wishlist">
+                                    <span class="heart"></span>
+                                </div> -->
+                                <div class="close"></div>
+                                <div class="vertical-wrapper">
+                                    <div id="vertical-slider">
+                                      <ul>
+                                          <li
+                                            data-image="./images/1.jpg"
+                                            class="ui-draggable ui-draggable-handle ui-draggable-disabled"
+                                            ></li>
+                                          <li
+                                            data-image="images/2.jpg"
+                                            class="ui-draggable ui-draggable-handle ui-draggable-disabled"
+                                            ></li>
+                                          <li
+                                            data-image="images/3.jpg"
+                                            class="ui-draggable ui-draggable-handle ui-draggable-disabled"
+                                            ></li>
+                                          <li
+                                            data-image="images/4.jpg"
+                                            class="ui-draggable ui-draggable-handle ui-draggable-disabled"
+                                            ></li>
+                                          <li
+                                            data-image="images/5.jpg"
+                                            class="ui-draggable ui-draggable-handle ui-draggable-disabled"
+                                            ></li>
+                                          <li
+                                            data-image="images/6.jpg"
+                                            class="ui-draggable ui-draggable-handle ui-draggable-disabled"
+                                            ></li>
+                                          <li
+                                            data-image="images/7.jpg"
+                                            class="ui-draggable ui-draggable-handle ui-draggable-disabled"
+                                            ></li>
+                                          <li
+                                            data-image="images/8.jpg"
+                                            class="ui-draggable ui-draggable-handle ui-draggable-disabled"
+                                            ></li>
+                                      </ul>
+                                    </div>
+                                </div>
+                                <div class="horizon-wrapper ">
+                                    <!-- <div class="horizone-nav">
+                                      <div class="prev" style="display: none;">
+                                          <img src="images/leftarrow.svg" />
+                                      </div>
+                                      <div class="next" style="display: block;">
+                                          <img src="images/rightarrow.svg" />
+                                      </div>
+                                    </div> -->
+                                    <div id="horizon-slider">
+                                      <ul style="width: 300px; height: 300px; left: 0px; top: 0px;">
+                                          <li
+                                            data-image="./images/1.jpg"
+                                            class="ui-draggable ui-draggable-handle ui-draggable-disabled"
+                                            ></li>
+                                          <li
+                                            data-image="images/2.jpg"
+                                            class="ui-draggable ui-draggable-handle ui-draggable-disabled"
+                                            ></li>
+                                          <li
+                                            data-image="images/3.jpg"
+                                            class="ui-draggable ui-draggable-handle ui-draggable-disabled"
+                                            ></li>
+                                          <li
+                                            data-image="images/4.jpg"
+                                            class="ui-draggable ui-draggable-handle ui-draggable-disabled"
+                                            ></li>
+                                          <li
+                                            data-image="images/5.jpg"
+                                            class="ui-draggable ui-draggable-handle ui-draggable-disabled"
+                                            ></li>
+                                          <li
+                                            data-image="images/6.jpg"
+                                            class="ui-draggable ui-draggable-handle ui-draggable-disabled"
+                                            ></li>
+                                          <li
+                                            data-image="images/7.jpg"
+                                            class="ui-draggable ui-draggable-handle ui-draggable-disabled"
+                                            ></li>
+                                          <li
+                                            data-image="images/8.jpg"
+                                            class="ui-draggable ui-draggable-handle ui-draggable-disabled"
+                                            ></li>
+                                      </ul>
+                                    </div>
+                                    <!-- <div class="dots">
+                                      <div class="dotwrap"></div>
+                                    </div> -->
+                                </div>
+                            </div>
+
+
+                            <div id="item-view-description">Modal title</div>
+                            <!-- ---------------------- -->
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <!-- ---------------------- -->
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <!-- ---------------------- -->
+                        </div>
+                        
+                    </div>
+                    </div>
+                </div>
+
+
+                <!-- Top slide -->
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <!-- <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol> -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="./products/slide1.PNG" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="./products/slide2.PNG" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="./products/slide3.PNG" alt="Third slide">
+            </div>
+          </div>
+          <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="false"></span>
+          </a> -->
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a id="carousel-btn-next" class="carousel-control-next" href="#carouselExampleIndicators" >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+        </div>
+
+                <div class="container h-100">
+                    <div id="product-list" class="row align-middle">
+                      <!-- <div id="item1" class="col-md-6 col-lg-4 column item-card">
+                            <div class="card gr-1">
+                                <div style="position: relative;">
+                                    <img class="item-card-pic" src="./products/item1.jpg" href="#" />
+                                    <div class="item-card-view-btn invisible-btn">Center</div>
+                                </div>
+                                <h1 class="item-card-name">item1</h1>
+                                <div class="item-card-price">$50</div>
+                                
+                            </div>
+                        </div> -->
+
+<!--
+                        <div class="col-md-6 col-lg-4 column item-card">
+                          <div class="card gr-2">
+                            <div class="txt">
+                              <h1>Web Front-End </br>
+                    SOLUTIONS</h1>
+                              <p>How design is implemented on the web.</p>
+                            </div>
+                            <a href="#">more</a>
+                          <div class="ico-card">
+                            <i class="fa fa-codepen"></i>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 column item-card">
+                          <div class="card gr-3">
+                            <div class="txt">
+                              <h1>UX/UI WEBsite </br>AND MOBILE app</h1>
+                              <p>User Interface and User Experience Design.</p>
+                            </div>
+                            <a href="#">more</a>
+                          <div class="ico-card">
+                            <i class="fa fa-empire"></i>
+                          </div>
+                          </div>
+                        </div>
+                        
+
+                        <div class="col-md-6 col-lg-4 column item-card">
+                          <div class="card gr-1">
+                            <div class="txt">
+                              <h1>BRANDING AND </br>
+                    CORPORATE DESIGN</h1>
+                              <p>Visual communication and problem-solving</p>
+                            </div>
+                            <a href="#">more</a>
+                            <div class="ico-card">
+                            <i class="fa fa-rebel"></i>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 column item-card">
+                          <div class="card gr-2">
+                            <div class="txt">
+                              <h1>Web Front-End </br>
+                    SOLUTIONS</h1>
+                              <p>How design is implemented on the web.</p>
+                            </div>
+                            <a href="#">more</a>
+                          <div class="ico-card">
+                            <i class="fa fa-codepen"></i>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 column item-card">
+                          <div class="card gr-3">
+                            <div class="txt">
+                              <h1>UX/UI WEBsite </br>AND MOBILE app</h1>
+                              <p>User Interface and User Experience Design.</p>
+                            </div>
+                            <a href="#">more</a>
+                          <div class="ico-card">
+                            <i class="fa fa-empire"></i>
+                          </div>
+                          </div>
+                        </div> -->
+                        
+                      </div>
+                  </div>
+              </div>
+              <!--    HOME - END    -->
+
+              <div role="tabpanel" class="tab-pane page-content" id="about">bbbbbb</div>
+              <div role="tabpanel" class="tab-pane page-content" id="contact">
+                  cccc
+                  <button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary">
+                    Loading state
+                  </button>
+                  
+                  <script>
+                    $('#myButton').on('click', function () {
+                      var $btn = $(this).button('loading')
+                      // business logic...
+                      $btn.button('reset')
+                    })
+                  </script>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider JS -->
+      <script src="./js/horizontalvertical.js"></script>
+    </body>
+</html>
